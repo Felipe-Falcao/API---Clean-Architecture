@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Felipe-Falcao/API---Clean-Architecture/issues"
   },
-  "homepage": "https://github.com/Felipe-Falcao/API---Clean-Architecture#readme"
+  "homepage": "https://github.com/Felipe-Falcao/API---Clean-Architecture#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.3"
+  }
 }
