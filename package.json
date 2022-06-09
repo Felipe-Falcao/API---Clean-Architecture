@@ -4,7 +4,7 @@
   "description": "> git config --local core.editor code",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:stagged": "jest --passWithNoTests",
     "check": "npm-check -s -u"
   },
