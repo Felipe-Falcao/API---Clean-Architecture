@@ -4,7 +4,7 @@ describe('DbAddAccount Usecase', () => {
   test('Should call Encrypter with correct password', async () => {
     class EncrypterStub {
       async encrypt(value: string): Promise<string> {
-        return new Promise(resolve => ('hashed_password'))
+        return new Promise(resolve => resolve('hashed_password'))
       }
     }
     const encrypterStub = new EncrypterStub()
