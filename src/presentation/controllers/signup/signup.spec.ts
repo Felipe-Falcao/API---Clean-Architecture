@@ -31,10 +31,10 @@ const makeFakeAccount = (): AccountModel => ({
 
 const makeFakeRequest = (): HttpRequest => ({
   body: {
-    name: 'valid_name',
-    email: 'valid_email@mail.com',
-    password: 'valid_password',
-    passwordConfirmation: 'valid_password'
+    name: 'any_name',
+    email: 'any_email@mail.com',
+    password: 'any_password',
+    passwordConfirmation: 'any_password'
   }
 })
 
@@ -135,7 +135,7 @@ describe('Signup Controller', () => {
     const { sut, emailValidatorStub } = makeSut()
     const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
     await sut.handle(makeFakeRequest())
-    expect(isValidSpy).toHaveBeenCalledWith('valid_email@mail.com')
+    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
   })
 
   test('Should return 500 if email validator throws', async () => {
@@ -152,9 +152,9 @@ describe('Signup Controller', () => {
     const addSpy = jest.spyOn(addAccountStub, 'add')
     await sut.handle(makeFakeRequest())
     expect(addSpy).toHaveBeenCalledWith({
-      name: 'valid_name',
-      email: 'valid_email@mail.com',
-      password: 'valid_password'
+      name: 'any_name',
+      email: 'any_email@mail.com',
+      password: 'any_password'
     })
   })
 
